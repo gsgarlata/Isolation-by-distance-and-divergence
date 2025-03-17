@@ -1,9 +1,0 @@
-growthRate 0.8
-migrationRate 0.04
-mSR 0.5
-doLongDistanceDispersal false
-reprodMale 1.0
-reprodFemale 1.0
-matingSystem random
-ratiosSettlers 0.
-settlers layer0
