@@ -17,3 +17,6 @@ This repository provides the scripts to model habitat loss and fragmentation in 
    * an R function used to compute Sij (Eq. S2), that is the average amount of time required for the ancestral lineages of two alleles sampled i and j steps apart to be in the same deme ([Sij_torus_beforeHL&F.R](HabitatContraction/Sij_torus_beforeHL&F.R));
    * an R script for plotting the mean TMRCA of two alleles sampled in two habitat fragments, by considering different dispersal rate and habitat fragment size ([plotMeanTMRCA_TorusHabitatFragmentationPerSe.R](HabitatFragmentationPerSe/plotMeanTMRCA_TorusHabitatFragmentationPerSe.R));
 
+* [pairwise Fst in a Torus Underoing Habitat Loss and Fragmentation](IsolationByDistanceAndDivergence): It models pairwise Fst in a toroidal stepping-stone model undergoing Habitat Loss and Fragmentation. The folder includes:
+
+  * an R function to compute the weighted Sij for lineages sa
