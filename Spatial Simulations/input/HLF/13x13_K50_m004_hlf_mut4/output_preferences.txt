@@ -1,0 +1,5 @@
+SaveDemOutput 1
+RecordStart 9000 
+generationsIntervaldem 10000
+generationsIntervalgen 50
+
