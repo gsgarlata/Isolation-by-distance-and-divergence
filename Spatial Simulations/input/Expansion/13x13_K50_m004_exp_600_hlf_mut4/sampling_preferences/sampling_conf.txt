@@ -1,8 +1,0 @@
-configNumber 2
-saving_scheme_1
-none
-saving_scheme_2
-subset subsetMap.txt
-timeline
-startAt 0 saving_scheme_1
-startAt 550 saving_scheme_2
