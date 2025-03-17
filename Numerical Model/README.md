@@ -1,6 +1,6 @@
-# Isolation-by-distance-and-divergence
+# Isolation-by-distance-and-divergence Model
 
-This repository provides the scripts to model habitat loss and fragmentation in a two-dimensional torus following the work performed in [Sgarlata et al., 2022](https://www.biorxiv.org/content/10.1101/2022.10.26.513874v1) study entitled: "The effect of habitat loss and fragmentation on isolation-by-distance-and-divergence".
+This folder includes scripts that implement the "Isolation-by-distance-and-divergence" model derived in [Sgarlata et al., 2022](https://www.biorxiv.org/content/10.1101/2022.10.26.513874v1). The [HabitatContraction](HabitatContraction) directory refers to scripts modelling non-equilibrium mean TMRCA in a torus undergoing population size change or habitat contraction. The [HabitatFragmentationPerSe](HabitatFragmentationPerSe) directory refers to scripts modelling non-equilibrium mean TMRCA in a torus subjected to barrier-to-gene-flow or habitat fragmentation. The [IsolationByDistanceAndDivergence](IsolationByDistanceAndDivergence) directory refers to scripts modelling non-equilibrium pairwise Fst in a torus undergoing changes in population size and connectivity or HL&F.
 
 * [mean TMRCA in Torus Underoing Habitat Contraction](HabitatContraction): It models non-equilibrium mean TMRCA in a torus undergoing habitat contraction. The folder includes:
 
