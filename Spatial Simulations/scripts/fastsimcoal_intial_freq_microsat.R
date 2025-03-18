@@ -118,19 +118,4 @@ Init_freq<-function(pop.size,sample.size,locus.type="msat",num.loci,mut.rate,exe
 }
 ##END: Function code##
 
-#The working directory must be the one where the genetics files are contained. Only one file is required to be already present
-#in the working directory, that is the "genotype.txt".
-#This function will generate files for each autosomal microsatellite locus (inlcudoing all the necessary information)
 
-
-working_dir = args[1] 
-
-setwd(working_dir)
-
-Init_freq(pop.size,
-          sample.size,
-          locus.type="msat",
-          num.loci,
-          mut.rate,
-          exec,
-          path_to_exec)
