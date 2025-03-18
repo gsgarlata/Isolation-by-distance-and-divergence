@@ -4,4 +4,4 @@ This directory contains the scripts and input files used for launching the SINS 
 
  * [Input files for SINS simulations of HL&F](input): it includes input files for the i) instantaneous HL&F (iHL&F), ii) range expansion prior to instantaneous HL&F (REx-iHL&F) and iii) two-step HL&F (2step-HL&F) scenarios.
 
- * [Scripts for performing SINS simulations](): it includes the scripts to model the initial genetic diversity of the simulated population, scripts to run the SINS program and the scripts for processing the SINS output. 
+ * [Scripts for performing SINS simulations](scripts): it includes the scripts to model the initial genetic diversity of the simulated population, scripts to run the SINS program and the scripts for processing the SINS output. 
