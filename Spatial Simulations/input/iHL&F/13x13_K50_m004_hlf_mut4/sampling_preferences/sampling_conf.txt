@@ -1,8 +1,6 @@
-configNumber 2
-saving_scheme_1
-none
-saving_scheme_2
-subset subsetMap.txt
+numberOfConfigs 2
+subset_config0 none
+subset_config1 subset subsetMap.txt
 timeline
-startAt 0 saving_scheme_1
-startAt 9000 saving_scheme_2
+startAt 0 subset_config0
+startAt 9000 subset_config1
