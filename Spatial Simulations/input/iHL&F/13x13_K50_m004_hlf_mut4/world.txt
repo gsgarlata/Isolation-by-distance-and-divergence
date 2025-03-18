@@ -5,5 +5,5 @@ arrivalTime0 0
 admixtureSexRatio00 1.
 admixture00 1.
 competition00 1.
-numberOfEnvVarEvents 1
-EnvVarTime 10000
+numberOfEnvironmentVariationEvents 1
+environmentVariationTime0 10000
