@@ -1,9 +1,9 @@
 Xlength 0
-Xtype seqSNP
+Xtype SNP
 Ylength 0
-Ytype seqSNP
+Ytype SNP
 mtDNAlength 0
-mtDNAtype seqSNP
+mtDNAtype SNP
 numberOfAutosomes 30
 A1length 1
 A1type microsat
