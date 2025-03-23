@@ -1,11 +1,6 @@
 # Run Spatial Simulations in SINS
 
-
-#The working directory must be the one where the genetics files are contained. Only one file is required to be already present
-#in the working directory, that is the "genotype.txt".
-#This function will generate files for each autosomal microsatellite locus (inlcudoing all the necessary information)
-
-1) It can be useful to give some initial level of genetic diversity to the population one intends to simulate. This usually reduces the simulation time, since the simulated population reaches mutation-drift equilibrium earlier than if one has to wait for the accumulation of new mutation in the forward-in-time simulator. The script for the `Init_freq` function shown below can be found at [initial_diversity](initial_diversity).
+1) It can be useful to give some initial level of genetic diversity to the population one intends to simulate. This usually reduces the simulation time, since the simulated population reaches mutation-drift equilibrium earlier than if one has to wait for the accumulation of new mutation in the forward-in-time simulator. The script for the `Init_freq` function shown below can be found at the [initial_diversity](initial_diversity) folder. Note that the `Init_freq` function simulates a panmictic population and convert the simulated output into files required for simulations in SINS. Also, note that the working directory must be the one where the genetics files are contained. Only one file is required to be already present in the working directory, that is the "genotype.txt".
 
 `Init_freq(pop.size, sample.size, locus.type="msat", num.loci, mut.rate, exec, path_to_exec)`
 
