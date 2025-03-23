@@ -12,9 +12,9 @@ Further details on the meaning of each argument and the possible settings can be
 
 3) After the simulation is concluded, one way to analyse SINS output is through the `step1.run_sampler.sh` script in [data_analysis](data_analysis).
 
-<p>file: name of the simulated scenario<br>
-<p>nstr: number of microsatellite loci<br>
-`nsims: number of simulation replicates`
+`file: name of the simulated scenario`  
+`nstr: number of microsatellite loci`  
+`nsims: number of simulation replicates`  
 `path_script:	the path where the "sampler.sh" is contained`
 `pathToSamplerOut: the path to Sampler output`
 `pathToSinsOut: the path to SINS output`
