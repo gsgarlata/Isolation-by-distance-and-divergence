@@ -21,4 +21,17 @@ Further details on the meaning of each argument and the possible settings can be
 
 `./step1.run_sampler.sh $file $nstr $nsims $path_script $pathToSamplerOut $pathToSinsOut`
 
-4) 
+4) `step2.run_GetData.sh` script in [data_analysis](data_analysis).
+
+`file: name of the simulated scenario`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`nSTR: number of microsatellite loci`  
+`nsims: number of simulation replicates`  
+`int_size: sampling time interval (e.g., how often to sample)`  
+`nind: number of sampled individuals`  
+`path_script: the path where the "Get_Data.sh" is contained.`  
+
+`./step2.run_GetData.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
+
+5) 
