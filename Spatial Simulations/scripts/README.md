@@ -48,3 +48,21 @@ Further details on the meaning of each argument and the possible settings can be
 `path_info: path to info output`  
 
 `./step3.run_list_extract.sh $file $time_start $time_end $int_size $name $scen_patch $path_script $nind $pathSinsOut $path_info`
+
+6) step4.run_list_FstStats.sh` script in [data_analysis](data_analysis).
+
+file=$1
+time_start=$2
+time_end=$3
+int_size=$4
+name=$5
+nSTR=$6
+path_script=$7
+path_functions=$8
+cpu_n=$9
+path_to_data=${10}
+
+./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR 
+
+
+7) 
