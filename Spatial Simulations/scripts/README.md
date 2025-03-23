@@ -34,7 +34,7 @@ Further details on the meaning of each argument and the possible settings can be
 
 `./step2.run_GetData.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
 
-5) `step3.run_list_extract.sh` script in [data_analysis](data_analysis), `scen_patch` files are stored in the [info](Spatial Simulations/info) folder.
+5) `step3.run_list_extract.sh` script in [data_analysis](data_analysis), `scen_patch` files are stored in the [info](../info) folder.
 
 `file: name of the simulated scenario`  
 `time_start: initial sampling time (forward-in-time)`  
