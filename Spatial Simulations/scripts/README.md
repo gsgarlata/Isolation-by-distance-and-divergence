@@ -15,7 +15,7 @@ Further details on the meaning of each argument and the possible settings can be
 `file: name of the simulated scenario`  
 `nstr: number of microsatellite loci`  
 `nsims: number of simulation replicates`  
-`path_script:	the path where the "sampler.sh" is contained`  
+`path_script: the path where the "sampler.sh" is contained`  
 `pathToSamplerOut: the path to Sampler output`  
 `pathToSinsOut: the path to SINS output`  
 
