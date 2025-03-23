@@ -8,4 +8,6 @@
 
 `java -jar SINS2.jar -projectName 13x13_K50_m004_hlf_mut4 -outDir output -numberOfSimulations 1 -compress noComp -parallel true -parallelCores 4 -verbose false -outputFormat sins -makeDemographicImages false`
 
+Further details on the meaning of each argument and the possible settings can be found at [SINS](https://github.com/PopConGen/SINS).
+
 3) 
