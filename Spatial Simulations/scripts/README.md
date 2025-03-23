@@ -39,12 +39,12 @@ Further details on the meaning of each argument and the possible settings can be
 `file: name of the simulated scenario`  
 `time_start: initial sampling time (forward-in-time)`  
 `time_end: last sampling time (forward-in-time)`  
-`int_size: sampling time interval (e.g., how often to sample)` 
+`int_size: sampling time interval (e.g., how often to sample)`  
 `name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`  
 `scen_patch: file to csv file with information on central demes (for "classic" sampling) or on patches (for "random" sampling).`  
 `path_script: the path where the "Get_Data.sh" is contained.`  
-`nind: number of sampled individuals` 
-`pathSinsOut: path to SINS output`    
+`nind: number of sampled individuals`  
+`pathSinsOut: path to SINS output`   
 `path_info: path to info output`  
 
 `./step3.run_list_extract.sh $file $time_start $time_end $int_size $name $scen_patch $path_script $nind $pathSinsOut $path_info`
