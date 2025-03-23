@@ -10,4 +10,15 @@
 
 Further details on the meaning of each argument and the possible settings can be found at [SINS](https://github.com/PopConGen/SINS).
 
-3) 
+3) After the simulation is concluded, one way to analyse SINS output is through the `step1.run_sampler.sh` script in [data_analysis](data_analysis).
+
+`file: name of the simulated scenario 
+nstr: number of microsatellite loci
+nsims: number of simulation replicates
+path_script:	the path where the "sampler.sh" is contained
+pathToSamplerOut: the path to Sampler output
+pathToSinsOut: the path to SINS output
+
+./step1.run_sampler.sh $file $nstr $nsims $path_script $pathToSamplerOut $pathToSinsOut`
+
+4) 
