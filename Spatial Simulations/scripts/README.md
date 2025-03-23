@@ -34,4 +34,17 @@ Further details on the meaning of each argument and the possible settings can be
 
 `./step2.run_GetData.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
 
-5) 
+5) `step3.run_list_extract.sh` script in [data_analysis](data_analysis), `scen_patch` files are stored in the [info](Spatial Simulations/info) folder.
+
+`file: name of the simulated scenario`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`int_size: sampling time interval (e.g., how often to sample)` 
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
+`scen_patch: file to csv file with information on central demes (for "classic" sampling) or on patches (for "random" sampling).
+`path_script: the path where the "Get_Data.sh" is contained.`  
+`nind: number of sampled individuals` 
+pathSinsOut=$9 #path to SINS output
+path_info=${10} #path to info output
+
+`./step3.run_list_extract.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
