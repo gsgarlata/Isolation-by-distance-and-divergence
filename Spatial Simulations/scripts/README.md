@@ -5,7 +5,7 @@
 #in the working directory, that is the "genotype.txt".
 #This function will generate files for each autosomal microsatellite locus (inlcudoing all the necessary information)
 
-1) It can be useful to give some initial level of genetic diversity to the population one intend to simulate. This usually reduces the simulation time, since the simulated population reaches mutatiojn-drift equilibrium earlier than if one is supposed to generate initial diversity from the forward-in-time simulator.
+1) It can be useful to give some initial level of genetic diversity to the population one intends to simulate. This usually reduces the simulation time, since the simulated population reaches mutation-drift equilibrium earlier than if one has to wait for the accumulation of new mutation in the forward-in-time simulator. The script for the `Init_freq` function shown below can be found at [initial_diversity](initial_diversity).
 
 `Init_freq(pop.size, sample.size, locus.type="msat", num.loci, mut.rate, exec, path_to_exec)`
 
