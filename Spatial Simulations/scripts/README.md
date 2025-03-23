@@ -42,7 +42,7 @@ Further details on the meaning of each argument and the possible settings can be
 `int_size: sampling time interval (e.g., how often to sample)`  
 `name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`  
 `scen_patch: file to csv file with information on central demes (for "classic" sampling) or on patches (for "random" sampling).`  
-`path_script: the path where the "Get_Data.sh" is contained.`  
+`path_script: the path where the "extract_generations.sh" is contained.`  
 `nind: number of sampled individuals`  
 `pathSinsOut: path to SINS output`   
 `path_info: path to info output`  
@@ -51,18 +51,44 @@ Further details on the meaning of each argument and the possible settings can be
 
 6) step4.run_list_FstStats.sh` script in [data_analysis](data_analysis).
 
-file=$1
-time_start=$2
-time_end=$3
-int_size=$4
-name=$5
-nSTR=$6
-path_script=$7
-path_functions=$8
-cpu_n=$9
-path_to_data=${10}
+`file: name of the simulated scenario`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`int_size: sampling time interval (e.g., how often to sample)`  
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
+`nSTR: number of microsatellite loci` 
+`path_script: the path where the "run_FstStats_parallel.sh" is contained.` 
+`cpu_n: number of CPUs to use for parallelization`  
+`pathSinsOut: path to SINS output`
 
-./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR 
+`./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR $path_script $cpu_n $pathSinsOut`
 
 
-7) 
+7) `step5.run_list_process_Fst.sh` script in [data_analysis](data_analysis).
+
+`file: name of the simulated scenario`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`int_size: sampling time interval (e.g., how often to sample)`  
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
+`nSTR: number of microsatellite loci` 
+`pathSinsOut: path to SINS output`
+`path_script: the path where the "process_FstStats.sh" is contained.`   
+
+`./step5.run_list_process_Fst.sh $file $time_start $time_end $int_size $name $nSTR $pathSinsOut $path_script`
+
+8) `step6.run_list_IbdStats_parallel.sh` script in [data_analysis](data_analysis).
+
+`file: name of the simulated scenario`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
+`nSTR: number of microsatellite loci` 
+`cpu_n: number of CPUs to use for parallelization` 
+`pathSinsOut: path to SINS output`
+`path_script: the path where the "IbdStats_parallel.sh" is contained.`  
+
+
+`./step6.run_list_IbdStats_parallel.sh `
+
+9) 
