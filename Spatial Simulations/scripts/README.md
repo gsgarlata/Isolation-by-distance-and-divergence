@@ -39,11 +39,11 @@ Further details on the meaning of each argument and the possible settings can be
 
     `./step3.run_list_extract.sh $file $time_start $time_end $int_size $name $scen_patch $path_script $nind $pathToSinsOut $path_info`
 
-   - step4.run_list_FstStats.sh` script in [data_analysis](data_analysis) is used to compute pairwise Fst and Rst across all pairs of demes. It saves a text file for each sampled time point.
+   - step4.run_list_FstStats.sh` script in [data_analysis](data_analysis) is used to compute pairwise `Fst` and `Rst` across all pairs of demes. It saves a text file for each sampled time point.
 
     `./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR $path_script $cpu_n $pathToSinsOut`
 
-   - `step5.run_list_process_Fst.sh` script in [data_analysis](data_analysis) is used to combine in one file the pairwise Fst and Rst valeus computed for each generation. The separation of this analysis in two steps allows to parallelize the calculation of pairwise Fst for each simulation replicate and generation efficiently.
+   - `step5.run_list_process_Fst.sh` script in [data_analysis](data_analysis) is used to combine in one file the pairwise `Fst` and `Rst` valeus computed for each generation. The separation of this analysis in two steps allows to parallelize the calculation of pairwise Fst for each simulation replicate and generation efficiently.
 
     `./step5.run_list_process_Fst.sh $file $time_start $time_end $int_size $name $nSTR $pathToSinsOut $path_script`
 
@@ -51,7 +51,7 @@ Further details on the meaning of each argument and the possible settings can be
 
     `./step6.run_list_IbdStats_parallel.sh $file $time_start $time_end $name $nSTR $cpu_n $pathToSinsOut $path_script`
 
-   - `step7.GenDiv_parallel.sh` script in [data_analysis](data_analysis) is used to compute three measures of genetic diversity for each forest fragment, that is expected heterozygosity (Hexp), observed heterozygosity (Hobs) and number of alleles (loc.n.all). This step generates one file for each sampled time point, containig the estimates for all simulation replicates.
+   - `step7.GenDiv_parallel.sh` script in [data_analysis](data_analysis) is used to compute three measures of genetic diversity for each forest fragment, that is expected heterozygosity (`Hexp`), observed heterozygosity (`Hobs`) and number of alleles (`loc.n.all`). This step generates one file for each sampled time point, containig the estimates for all simulation replicates.
 
     `./step7.GenDiv_parallel.sh $file $time_start $time_end $int_size $name $pathToSinsOut $cpu_n $path_script`
 
