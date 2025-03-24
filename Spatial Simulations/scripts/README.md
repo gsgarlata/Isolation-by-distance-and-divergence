@@ -10,17 +10,26 @@
 
 Further details on the meaning of each argument and the possible settings can be found at [SINS](https://github.com/PopConGen/SINS).
 
-3) After the simulation is concluded, one way to analyse SINS output is through the `step1.run_sampler.sh` script in [data_analysis](data_analysis).
-   - Wecan see
-     - of course
+3) After the simulation is concluded, the steps required to reformat SINS output for genetic analyses in `R` are described below. The list of arguments shown here are used across all scripts.
+
 `file: name of the simulated scenario`  
-`nstr: number of microsatellite loci`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`int_size: sampling time interval (e.g., how often to sample)`  
+`nSTR: number of microsatellite loci`  
+`nind: number of sampled individuals`  
 `nsims: number of simulation replicates`  
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`  
+`scen_patch: file to csv file with information on central demes (for "classic" sampling) or on patches (for "random" sampling).`  
 `path_script: the path where the "sampler.sh" is contained`  
 `pathToSamplerOut: the path to Sampler output`  
-`pathToSinsOut: the path to SINS output`  
+`pathToSinsOut: the path to SINS output` 
+`path_info: path to info output`  
+`cpu_n: number of CPUs to use for parallelization`  
 
-`./step1.run_sampler.sh $file $nstr $nsims $path_script $pathToSamplerOut $pathToSinsOut`
+   - `step1.run_sampler.sh` script in [data_analysis](data_analysis) is used to reformat SINS output in `adegenet` format for analyses in `R`.
+     
+     `./step1.run_sampler.sh $file $nSTR $nsims $path_script $pathToSamplerOut $pathToSinsOut`
 
 4) `step2.run_GetData.sh` script in [data_analysis](data_analysis).
   
