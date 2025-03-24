@@ -1,16 +1,19 @@
 # Run Spatial Simulations in SINS
 
-1) It can be useful to give some initial level of genetic diversity to the population one intends to simulate. This usually reduces the simulation time, since the simulated population reaches mutation-drift equilibrium earlier than if one has to wait for the accumulation of new mutation in the forward-in-time simulator. The script for the `Init_freq` function shown below can be found at the [initial_diversity](initial_diversity) folder. Note that the `Init_freq` function simulates a panmictic population and convert the simulated output into files required for simulations in SINS. Also, note that the working directory must be the one where the genetics files are contained. Only one file is required to be already present in the working directory, that is the "genotype.txt".
+## 1. Initial Genetic Diversity 
+It can be useful to give some initial level of genetic diversity to the population one intends to simulate. This usually reduces the simulation time, since the simulated population reaches mutation-drift equilibrium earlier than if one has to wait for the accumulation of new mutation in the forward-in-time simulator. The script for the `Init_freq` function shown below can be found at the [initial_diversity](initial_diversity) folder. Note that the `Init_freq` function simulates a panmictic population and convert the simulated output into files required for simulations in SINS. Also, note that the working directory must be the one where the genetics files are contained. Only one file is required to be already present in the working directory, that is the "genotype.txt".
 
-`Init_freq(pop.size, sample.size, locus.type="msat", num.loci, mut.rate, exec, path_to_exec)`
+  `Init_freq(pop.size, sample.size, locus.type="msat", num.loci, mut.rate, exec, path_to_exec)`
 
-2) Once the input files are set up, the simulations can be carried out by typing this command:
+## 2. Simulation in SINS
+Once the input files are set up, the simulations can be carried out by typing this command:
 
 `java -jar SINS2.jar -projectName 13x13_K50_m004_hlf_mut4 -outDir output -numberOfSimulations 1 -compress noComp -parallel true -parallelCores 4 -verbose false -outputFormat sins -makeDemographicImages false`
 
 Further details on the meaning of each argument and the possible settings can be found at [SINS](https://github.com/PopConGen/SINS).
 
-3) After the simulation is concluded, the steps required to reformat SINS output for genetic analyses in `R` are described below. The list of arguments shown here are used across all scripts.
+## 3. Processing and Analyzing SINS output
+After the simulation is concluded, the steps required to reformat SINS output for genetic analyses in `R` are described below. The list of arguments shown here are used across all scripts.
 
 `file: name of the simulated scenario`  
 `time_start: initial sampling time (forward-in-time)`  
