@@ -22,7 +22,7 @@ Further details on the meaning of each argument and the possible settings can be
 `./step1.run_sampler.sh $file $nstr $nsims $path_script $pathToSamplerOut $pathToSinsOut`
 
 4) `step2.run_GetData.sh` script in [data_analysis](data_analysis).
-
+   -  steststts
 `file: name of the simulated scenario`  
 `time_start: initial sampling time (forward-in-time)`  
 `time_end: last sampling time (forward-in-time)`  
