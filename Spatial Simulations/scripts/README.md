@@ -68,6 +68,6 @@ The previous section explained how to analyse SINS output and retrieve summary s
 
 - `plot_IBD_in_time.R` script is used to plot the linear regression of the logarithm of pairwise geographical distance with `Fst/(1 - Fst)` (IBD) over time, as to show the effect of HL&F on IBD.
 - `plot_IBDpvalue_in_time.R` script is used to plot the statistical significance of the IBD (measured with the p-value of the Mantel test performed between geographical and genetic distance) over time.
-- `plot_pairwiseFst_in_time.R`
-- `plot_withinFragmentGeneticDiversity_in_time.R`
+- `plot_pairwiseFst_in_time.R` script is used to plot pairwise Fst over time accounting for geogrpahical distance, that is pairwise Fsts between deme pairs with the sampe geogrpahical distance are averaged together. 
+- `plot_withinFragmentGeneticDiversity_in_time.R` script is used to plot within-fragment genetic diversity over time, averaged across all habitat fragments.
   
