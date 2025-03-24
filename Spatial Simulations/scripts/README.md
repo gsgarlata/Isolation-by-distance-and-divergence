@@ -37,83 +37,27 @@ Further details on the meaning of each argument and the possible settings can be
 
    - `step3.run_list_extract.sh` script in [data_analysis](data_analysis) is used to subsample the genetic data extracted in the previous step according to a sampling design specified in the `scen_patch` file (those used in [Sgarlata et al., 2022](https://www.biorxiv.org/content/10.1101/2022.10.26.513874v1) are stored in the [info](../info) folder).
 
-`file: name of the simulated scenario`  
-`time_start: initial sampling time (forward-in-time)`  
-`time_end: last sampling time (forward-in-time)`  
-`int_size: sampling time interval (e.g., how often to sample)`  
-`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`  
-`scen_patch: file to csv file with information on central demes (for "classic" sampling) or on patches (for "random" sampling).`  
-`path_script: the path where the "extract_generations.sh" is contained.`  
-`nind: number of sampled individuals`  
-`pathSinsOut: path to SINS output`   
-`path_info: path to info output`  
+     `./step3.run_list_extract.sh $file $time_start $time_end $int_size $name $scen_patch $path_script $nind $pathToSinsOut $path_info`
 
-`./step3.run_list_extract.sh $file $time_start $time_end $int_size $name $scen_patch $path_script $nind $pathSinsOut $path_info`
+   - step4.run_list_FstStats.sh` script in [data_analysis](data_analysis) is used to compute pairwise Fst and Rst across all pairs of demes. It saves a text file for each sampled time point.
 
-6) step4.run_list_FstStats.sh` script in [data_analysis](data_analysis).
+     `./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR $path_script $cpu_n $pathToSinsOut`
 
-`file: name of the simulated scenario`  
-`time_start: initial sampling time (forward-in-time)`  
-`time_end: last sampling time (forward-in-time)`  
-`int_size: sampling time interval (e.g., how often to sample)`  
-`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
-`nSTR: number of microsatellite loci` 
-`path_script: the path where the "run_FstStats_parallel.sh" is contained.` 
-`cpu_n: number of CPUs to use for parallelization`  
-`pathSinsOut: path to SINS output`
+   - `step5.run_list_process_Fst.sh` script in [data_analysis](data_analysis) is used to combine in one file the pairwise Fst and Rst valeus computed for each generation. The separation of this analysis in two steps allows to parallelize the calculation of pairwise Fst for each simulation replicate and generation efficiently.
 
-`./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR $path_script $cpu_n $pathSinsOut`
+    `./step5.run_list_process_Fst.sh $file $time_start $time_end $int_size $name $nSTR $pathToSinsOut $path_script`
 
+   - `step6.run_list_IbdStats_parallel.sh` script in [data_analysis](data_analysis) is used to compute isolation-by-distance (IBD) at each generation and simulation replicate by regressing the logarithm of geographical distance with `Fst/(1-Fst)` or `Rst/(1-Rst)`.
 
-7) `step5.run_list_process_Fst.sh` script in [data_analysis](data_analysis).
+    `./step6.run_list_IbdStats_parallel.sh $file $time_start $time_end $name $nSTR $cpu_n $pathToSinsOut $path_script`
 
-`file: name of the simulated scenario`  
-`time_start: initial sampling time (forward-in-time)`  
-`time_end: last sampling time (forward-in-time)`  
-`int_size: sampling time interval (e.g., how often to sample)`  
-`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
-`nSTR: number of microsatellite loci` 
-`pathSinsOut: path to SINS output`
-`path_script: the path where the "process_FstStats.sh" is contained.`   
+   - `step7.GenDiv_parallel.sh` script in [data_analysis](data_analysis). 
 
-`./step5.run_list_process_Fst.sh $file $time_start $time_end $int_size $name $nSTR $pathSinsOut $path_script`
-
-8) `step6.run_list_IbdStats_parallel.sh` script in [data_analysis](data_analysis).
-
-`file: name of the simulated scenario`  
-`time_start: initial sampling time (forward-in-time)`  
-`time_end: last sampling time (forward-in-time)`  
-`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`  
-`nSTR: number of microsatellite loci`  
-`cpu_n: number of CPUs to use for parallelization`  
-`pathSinsOut: path to SINS output`  
-`path_script: the path where the "IbdStats_parallel.sh" is contained.`  
-
-
-`./step6.run_list_IbdStats_parallel.sh $file $time_start $time_end $name $nSTR $cpu_n $pathSinsOut $path_script`
-
-9) `step7.GenDiv_parallel.sh` script in [data_analysis](data_analysis).
-
-`file: name of the simulated scenario`  
-`time_start: initial sampling time (forward-in-time)`  
-`time_end: last sampling time (forward-in-time)`  
-`int_size: sampling time interval (e.g., how often to sample)`  
-`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
-`pathSinsOut: path to SINS output`  
-`cpu_n: number of CPUs to use for parallelization`  
-`path_script: the path where the "run_GenDiv_parallel.sh" is contained.`  
-
-`./step7.GenDiv_parallel.sh $file $time_start $time_end $int_size $name $pathSinsOut $cpu_n $path_script`
+`./step7.GenDiv_parallel.sh $file $time_start $time_end $int_size $name $pathToSinsOut $cpu_n $path_script`
 
 10) `step8.run_list_process_GenDiv.sh` script in [data_analysis](data_analysis).
 
-`file: name of the simulated scenario`  
-`time_start: initial sampling time (forward-in-time)`  
-`time_end: last sampling time (forward-in-time)`  
-`int_size: sampling time interval (e.g., how often to sample)`  
-`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
-`pathSinsOut: path to SINS output`  
-`path_script: the path where the "process_GenDiv_parallel.sh" is contained.`  
 
-`./step8.run_list_process_GenDiv.sh $file $time_start $time_end $int_size $name $pathSinsOut $path_script`
+
+`./step8.run_list_process_GenDiv.sh $file $time_start $time_end $int_size $name $pathToSinsOut $path_script`
 
