@@ -91,4 +91,28 @@ Further details on the meaning of each argument and the possible settings can be
 
 `./step6.run_list_IbdStats_parallel.sh $file $time_start $time_end $name $nSTR $cpu_n $pathSinsOut $path_script`
 
-9) 
+9) `step7.GenDiv_parallel.sh` script in [data_analysis](data_analysis).
+
+`file: name of the simulated scenario`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`int_size: sampling time interval (e.g., how often to sample)`  
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
+`pathSinsOut: path to SINS output`  
+`cpu_n: number of CPUs to use for parallelization`  
+`path_script: the path where the "run_GenDiv_parallel.sh" is contained.`  
+
+`./step7.GenDiv_parallel.sh $file $time_start $time_end $int_size $name $pathSinsOut $cpu_n $path_script`
+
+10) `step8.run_list_process_GenDiv.sh` script in [data_analysis](data_analysis).
+
+`file: name of the simulated scenario`  
+`time_start: initial sampling time (forward-in-time)`  
+`time_end: last sampling time (forward-in-time)`  
+`int_size: sampling time interval (e.g., how often to sample)`  
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
+`pathSinsOut: path to SINS output`  
+`path_script: the path where the "process_GenDiv_parallel.sh" is contained.`  
+
+`./step8.run_list_process_GenDiv.sh $file $time_start $time_end $int_size $name $pathSinsOut $path_script`
+
