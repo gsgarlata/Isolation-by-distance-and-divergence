@@ -29,11 +29,11 @@ Further details on the meaning of each argument and the possible settings can be
 
    - `step1.run_sampler.sh` script in [data_analysis](data_analysis) is used to reformat SINS output in an intermediate text format for analyses.
      
-     `./step1.run_sampler.sh $file $nSTR $nsims $path_script $pathToSamplerOut $pathToSinsOut`
+    `./step1.run_sampler.sh $file $nSTR $nsims $path_script $pathToSamplerOut $pathToSinsOut`
 
    - `step2.run_GetData.sh` script in [data_analysis](data_analysis) is used to extract the genetic data into `adegenet` format in `R` and saved it in an R objejct for each sampled time point.
 
-     `./step2.run_GetData.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
+    `./step2.run_GetData.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
 
    - `step3.run_list_extract.sh` script in [data_analysis](data_analysis) is used to subsample the genetic data extracted in the previous step according to a sampling design specified in the `scen_patch` file (those used in [Sgarlata et al., 2022](https://www.biorxiv.org/content/10.1101/2022.10.26.513874v1) are stored in the [info](../info) folder).
 
@@ -47,17 +47,15 @@ Further details on the meaning of each argument and the possible settings can be
 
     `./step5.run_list_process_Fst.sh $file $time_start $time_end $int_size $name $nSTR $pathToSinsOut $path_script`
 
-   - `step6.run_list_IbdStats_parallel.sh` script in [data_analysis](data_analysis) is used to compute isolation-by-distance (IBD) at each generation and simulation replicate by regressing the logarithm of geographical distance with `Fst/(1-Fst)` or `Rst/(1-Rst)`.
+   - `step6.run_list_IbdStats_parallel.sh` script in [data_analysis](data_analysis) is used to compute isolation-by-distance (IBD) at each generation and simulation replicate by regressing the logarithm of geographical distance with `Fst/(1-Fst)` or `Rst/(1-Rst)`. The results are saved in one text file.
 
     `./step6.run_list_IbdStats_parallel.sh $file $time_start $time_end $name $nSTR $cpu_n $pathToSinsOut $path_script`
 
-   - `step7.GenDiv_parallel.sh` script in [data_analysis](data_analysis). 
+   - `step7.GenDiv_parallel.sh` script in [data_analysis](data_analysis) is used to compute three measures of genetic diversity for each forest fragment, that is expected heterozygosity (Hexp), observed heterozygosity (Hobs) and number of alleles (loc.n.all). This step generates one file for each sampled time point, containig the estimates for all simulation replicates.
 
-`./step7.GenDiv_parallel.sh $file $time_start $time_end $int_size $name $pathToSinsOut $cpu_n $path_script`
+    `./step7.GenDiv_parallel.sh $file $time_start $time_end $int_size $name $pathToSinsOut $cpu_n $path_script`
 
-10) `step8.run_list_process_GenDiv.sh` script in [data_analysis](data_analysis).
-
-
-
-`./step8.run_list_process_GenDiv.sh $file $time_start $time_end $int_size $name $pathToSinsOut $path_script`
+   - `step8.run_list_process_GenDiv.sh` script in [data_analysis](data_analysis) is used to combine in one file the genetic diversity estimated in the previous step.
+ 
+    `./step8.run_list_process_GenDiv.sh $file $time_start $time_end $int_size $name $pathToSinsOut $path_script`
 
