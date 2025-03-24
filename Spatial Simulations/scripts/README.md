@@ -37,11 +37,11 @@ Further details on the meaning of each argument and the possible settings can be
 
    - `step3.run_list_extract.sh` script in [data_analysis](data_analysis) is used to subsample the genetic data extracted in the previous step according to a sampling design specified in the `scen_patch` file (those used in [Sgarlata et al., 2022](https://www.biorxiv.org/content/10.1101/2022.10.26.513874v1) are stored in the [info](../info) folder).
 
-     `./step3.run_list_extract.sh $file $time_start $time_end $int_size $name $scen_patch $path_script $nind $pathToSinsOut $path_info`
+    `./step3.run_list_extract.sh $file $time_start $time_end $int_size $name $scen_patch $path_script $nind $pathToSinsOut $path_info`
 
    - step4.run_list_FstStats.sh` script in [data_analysis](data_analysis) is used to compute pairwise Fst and Rst across all pairs of demes. It saves a text file for each sampled time point.
 
-     `./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR $path_script $cpu_n $pathToSinsOut`
+    `./step4.run_list_FstStats.sh $file $time_start $time_end $int_size $name $nSTR $path_script $cpu_n $pathToSinsOut`
 
    - `step5.run_list_process_Fst.sh` script in [data_analysis](data_analysis) is used to combine in one file the pairwise Fst and Rst valeus computed for each generation. The separation of this analysis in two steps allows to parallelize the calculation of pairwise Fst for each simulation replicate and generation efficiently.
 
