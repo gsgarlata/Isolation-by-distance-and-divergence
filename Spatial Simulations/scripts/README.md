@@ -82,13 +82,13 @@ Further details on the meaning of each argument and the possible settings can be
 `file: name of the simulated scenario`  
 `time_start: initial sampling time (forward-in-time)`  
 `time_end: last sampling time (forward-in-time)`  
-`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`
-`nSTR: number of microsatellite loci` 
-`cpu_n: number of CPUs to use for parallelization` 
-`pathSinsOut: path to SINS output`
+`name: sampling strategy: sampling across different demes within fragment ("random") or sampling in the central deme within fragment ("classic")`  
+`nSTR: number of microsatellite loci`  
+`cpu_n: number of CPUs to use for parallelization`  
+`pathSinsOut: path to SINS output`  
 `path_script: the path where the "IbdStats_parallel.sh" is contained.`  
 
 
-`./step6.run_list_IbdStats_parallel.sh `
+`./step6.run_list_IbdStats_parallel.sh $file $time_start $time_end $name $nSTR $cpu_n $pathSinsOut $path_script`
 
 9) 
