@@ -27,24 +27,15 @@ Further details on the meaning of each argument and the possible settings can be
 `path_info: path to info output`  
 `cpu_n: number of CPUs to use for parallelization`  
 
-   - `step1.run_sampler.sh` script in [data_analysis](data_analysis) is used to reformat SINS output in `adegenet` format for analyses in `R`.
+   - `step1.run_sampler.sh` script in [data_analysis](data_analysis) is used to reformat SINS output in an intermediate text format for analyses.
      
      `./step1.run_sampler.sh $file $nSTR $nsims $path_script $pathToSamplerOut $pathToSinsOut`
 
-4) `step2.run_GetData.sh` script in [data_analysis](data_analysis).
-  
-`file: name of the simulated scenario`  
-`time_start: initial sampling time (forward-in-time)`  
-`time_end: last sampling time (forward-in-time)`  
-`nSTR: number of microsatellite loci`  
-`nsims: number of simulation replicates`  
-`int_size: sampling time interval (e.g., how often to sample)`  
-`nind: number of sampled individuals`  
-`path_script: the path where the "Get_Data.sh" is contained.`  
+   - `step2.run_GetData.sh` script in [data_analysis](data_analysis) is used to extract the genetic data into `adegenet` format in `R` and saved it in an R objejct for each sampled time point.
 
-`./step2.run_GetData.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
+     `./step2.run_GetData.sh $file $time_start $time_end $nSTR $nsims $int_size $nind $path_script`
 
-5) `step3.run_list_extract.sh` script in [data_analysis](data_analysis), `scen_patch` files are stored in the [info](../info) folder.
+   - `step3.run_list_extract.sh` script in [data_analysis](data_analysis) is used to subsample the genetic data extracted in the previous step according to a sampling design specified in the `scen_patch` file (those used in [Sgarlata et al., 2022](https://www.biorxiv.org/content/10.1101/2022.10.26.513874v1) are stored in the [info](../info) folder).
 
 `file: name of the simulated scenario`  
 `time_start: initial sampling time (forward-in-time)`  
