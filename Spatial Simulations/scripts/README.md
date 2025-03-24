@@ -62,3 +62,12 @@ After the simulation is concluded, the steps required to reformat SINS output fo
  
     `./step8.run_list_process_GenDiv.sh $file $time_start $time_end $int_size $name $pathToSinsOut $path_script`
 
+## Plotting Summary Statistics from SINS output
+
+The previous section explained how to analyse SINS output and retrieve summary statistics from the simulated scenario. This section refers to scripts used to plot the summary statistics and how do they change over time, before and after HL&F. All scripts are stored in the [plotting](plotting) folder.
+
+- `plot_IBD_in_time.R` script is used to plot the linear regression of the logarithm of pairwise geographical distance with `Fst/(1 - Fst)` (IBD) over time, as to show the effect of HL&F on IBD.
+- `plot_IBDpvalue_in_time.R` script is used to plot the statistical significance of the IBD (measured with the p-value of the Mantel test performed between geographical and genetic distance) over time.
+- `plot_pairwiseFst_in_time.R`
+- `plot_withinFragmentGeneticDiversity_in_time.R`
+  
